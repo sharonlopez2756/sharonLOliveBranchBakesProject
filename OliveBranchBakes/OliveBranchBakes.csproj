@@ -92,6 +92,8 @@
     <Compile Include="Forms\AdminConsoleForm.Designer.cs">
       <DependentUpon>AdminConsoleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\AppSettings.cs" />
+    <Compile Include="Services\DataStore.cs" />
     <!-- Services -->
     <Compile Include="Services\IOrderService.cs" />
     <Compile Include="Services\IProductService.cs" />

@@ -11,7 +11,7 @@ namespace OliveBranchBakes.Models
         public string Category { get; set; }         
         public bool IsSeasonal { get; set; }
         public bool IsAvailable { get; set; }
-        public string ImagePath { get; set; }         
+        public string ImagePath { get; set; }
 
         public Product()
         {
@@ -21,5 +21,7 @@ namespace OliveBranchBakes.Models
             IsAvailable = true;
             ImagePath = string.Empty;
         }
+            public System.DateTime? SeasonStart { get; set; }
+            public System.DateTime? SeasonEnd { get; set; }
     }
-}
+    }

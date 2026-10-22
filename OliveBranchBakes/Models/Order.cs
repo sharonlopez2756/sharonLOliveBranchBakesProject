@@ -23,7 +23,11 @@ namespace OliveBranchBakes.Models
             Items = new List<OrderItem>();
         }
 
-        // Placeholder properties for future phases
+        public decimal Discount { get; set; }
+        public decimal Fees { get; set; }
+        public decimal Tax { get; set; }
+        public string ConfirmationNumber { get; set; }
+        public System.DateTime? PickupDate { get; set; }
         public decimal SubTotal { get; set; }
         public decimal Total { get; set; }
     }
