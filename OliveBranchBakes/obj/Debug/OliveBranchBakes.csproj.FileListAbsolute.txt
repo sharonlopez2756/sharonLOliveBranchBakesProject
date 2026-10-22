@@ -1,0 +1,7 @@
+C:\Users\slope\Downloads\OliveBranchBakes_Phase1\OliveBranchBakes\OliveBranchBakes\bin\Debug\OliveBranchBakes.exe.config
+C:\Users\slope\Downloads\OliveBranchBakes_Phase1\OliveBranchBakes\OliveBranchBakes\bin\Debug\OliveBranchBakes.exe
+C:\Users\slope\Downloads\OliveBranchBakes_Phase1\OliveBranchBakes\OliveBranchBakes\bin\Debug\OliveBranchBakes.pdb
+C:\Users\slope\Downloads\OliveBranchBakes_Phase1\OliveBranchBakes\OliveBranchBakes\obj\Debug\OliveBranchBakes.csproj.AssemblyReference.cache
+C:\Users\slope\Downloads\OliveBranchBakes_Phase1\OliveBranchBakes\OliveBranchBakes\obj\Debug\OliveBranchBakes.csproj.CoreCompileInputs.cache
+C:\Users\slope\Downloads\OliveBranchBakes_Phase1\OliveBranchBakes\OliveBranchBakes\obj\Debug\OliveBranchBakes.exe
+C:\Users\slope\Downloads\OliveBranchBakes_Phase1\OliveBranchBakes\OliveBranchBakes\obj\Debug\OliveBranchBakes.pdb
