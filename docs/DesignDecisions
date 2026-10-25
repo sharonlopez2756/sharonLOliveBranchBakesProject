@@ -1,1 +1,12 @@
+Phase 3A 10/25/2026
+
+1) 
+Decision: Store all money values as decimal
+Where: Models/Product.cs (Price), Models/Order.cs (SubTotal, Discount, Fees, Tax, Total), Models/OrderItem.cs (UnitPrice, LineTotal), Models/AppSettings.cs (tax rate, rush fee, plan-ahead discount).
+What: Every price, fee, discount, and total is held in a decimal property so the calculations regarding dollars and cents are accurate rather than drifting with binary floating-point rounding.
+Why: Olive Branch Bakes charges real money (pies at $22.00, plan-ahead discount of $0.50, rush fee of $5.00, tax at 8.5%). My Variant Card (P5) needs exact half-dollar discounts and fee math. decimal matches how currency works and matches the Phase 3 rule that money must not use double or float.
+Alt. Rejected: Using double for prices, not clean for binary floating point.
+Source/test: I wrote this myself as part of completing the model stubs. Proved by hand-calculated rows T1 and T3 (subtotal $50.50, tax and totals to the cent).
+
+
 
