@@ -1,14 +1,16 @@
+using System;
 using System.Collections.Generic;
 using OliveBranchBakes.Models;
 
 namespace OliveBranchBakes.Services
 {
    
-    // Contract for product-related operations.
-    
+
     public interface IProductService
     {
-        // Future: IEnumerable<Product> GetAvailableProducts();
-        // Future: Product GetById(int productId);
+        IList<Product> GetAvailableProducts(DateTime asOfDate);
+        IList<Product> GetAvailableProducts(DateTime asOfDate, string category);
+        IList<string> GetCategories(DateTime asOfDate);
+        Product GetById(int productId);
     }
 }
