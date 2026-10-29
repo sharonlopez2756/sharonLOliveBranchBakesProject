@@ -8,5 +8,12 @@ Why: Olive Branch Bakes charges real money (pies at $22.00, plan-ahead discount 
 Alt. Rejected: Using double for prices, not clean for binary floating point.
 Source/test: I wrote this myself as part of completing the model stubs. Proved by hand-calculated rows T1 and T3 (subtotal $50.50, tax and totals to the cent).
 
+Phase 3B 10/29/2026
 
+1) Decision: Filter the menu in ProductService so seasonal items only appear inside their season dates
+Where: Services/ProductService.cs (GetAvailableProducts), Models/Product.cs (IsInSeason)
+What: Available products are those marked available and in season for the selected menu date. Gingerbread loaf uses Nov 15–Jan 5 (month/day) so it shows or hides when the customer changes “Menu as of.”
+Why: Variant Card digit 4 requires Gingerbread loaf only in season, with dates stored on the product (menu data), not hard-coded in a form.
+Alt. rejected: Hiding the item only in the form with an if on the date picker. That puts a business rule in the UI and is harder to test or reuse.
+Source/test: Written for Checkpoint 3B. Proved by setting menu date to 12/01 (Gingerbread appears) and 06/01 (Gingerbread disappears).
 
