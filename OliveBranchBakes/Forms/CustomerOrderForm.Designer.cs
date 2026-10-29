@@ -33,7 +33,7 @@ namespace OliveBranchBakes.Forms
             this.labelCategory = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpMenu = new System.Windows.Forms.DateTimePicker();
+            this.dtpMenuDate = new System.Windows.Forms.DateTimePicker();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.btnRemoveItem = new System.Windows.Forms.Button();
             this.btnChangeQty = new System.Windows.Forms.Button();
@@ -215,6 +215,7 @@ namespace OliveBranchBakes.Forms
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(127, 21);
             this.cmbCategory.TabIndex = 10;
+            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged_1);
             // 
             // labelCategory
             // 
@@ -252,12 +253,13 @@ namespace OliveBranchBakes.Forms
             this.label2.TabIndex = 13;
             this.label2.Text = "Menu as of:";
             // 
-            // dtpMenu
+            // dtpMenuDate
             // 
-            this.dtpMenu.Location = new System.Drawing.Point(425, 85);
-            this.dtpMenu.Name = "dtpMenu";
-            this.dtpMenu.Size = new System.Drawing.Size(200, 20);
-            this.dtpMenu.TabIndex = 14;
+            this.dtpMenuDate.Location = new System.Drawing.Point(425, 85);
+            this.dtpMenuDate.Name = "dtpMenuDate";
+            this.dtpMenuDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpMenuDate.TabIndex = 14;
+            this.dtpMenuDate.ValueChanged += new System.EventHandler(this.dtpMenu_ValueChanged);
             // 
             // lblSubtotal
             // 
@@ -285,6 +287,7 @@ namespace OliveBranchBakes.Forms
             this.btnRemoveItem.TabIndex = 16;
             this.btnRemoveItem.Text = "Remove  Item";
             this.btnRemoveItem.UseVisualStyleBackColor = false;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // btnChangeQty
             // 
@@ -300,6 +303,7 @@ namespace OliveBranchBakes.Forms
             this.btnChangeQty.TabIndex = 17;
             this.btnChangeQty.Text = "Update Qty";
             this.btnChangeQty.UseVisualStyleBackColor = false;
+            this.btnChangeQty.Click += new System.EventHandler(this.btnChangeQty_Click);
             // 
             // CustomerOrderForm
             // 
@@ -309,7 +313,7 @@ namespace OliveBranchBakes.Forms
             this.Controls.Add(this.btnChangeQty);
             this.Controls.Add(this.btnRemoveItem);
             this.Controls.Add(this.lblSubtotal);
-            this.Controls.Add(this.dtpMenu);
+            this.Controls.Add(this.dtpMenuDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelCategory);
@@ -358,7 +362,7 @@ namespace OliveBranchBakes.Forms
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpMenu;
+        private System.Windows.Forms.DateTimePicker dtpMenuDate;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Button btnRemoveItem;
         private System.Windows.Forms.Button btnChangeQty;
