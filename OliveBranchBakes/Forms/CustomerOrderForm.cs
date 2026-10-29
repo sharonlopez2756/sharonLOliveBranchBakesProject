@@ -68,5 +68,15 @@ namespace OliveBranchBakes.Forms
         {
             // Keep application running if other forms are open
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstOrderItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
