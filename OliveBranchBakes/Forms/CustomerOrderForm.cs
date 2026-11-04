@@ -155,6 +155,7 @@ namespace OliveBranchBakes.Forms
                 {
                     ProductId = product.ProductId,
                     ProductName = product.Name,
+                    Category = product.Category,
                     UnitPrice = product.Price,
                     Quantity = quantity
                 });
@@ -226,7 +227,7 @@ namespace OliveBranchBakes.Forms
                 return;
             }
 
-            var summary = new OrderSummaryForm();
+            var summary = new OrderSummaryForm(_cart.ToList());
             summary.Show();
             this.Hide();
         }
