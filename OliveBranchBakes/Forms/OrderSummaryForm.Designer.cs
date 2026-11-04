@@ -22,6 +22,9 @@ namespace OliveBranchBakes.Forms
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.lblPickupDate = new System.Windows.Forms.Label();
+            this.dtpPickup = new System.Windows.Forms.DateTimePicker();
+            this.lblTotals = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -31,9 +34,9 @@ namespace OliveBranchBakes.Forms
             this.pnlHeader.Controls.Add(this.lblHeader);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(390, 42);
+            this.pnlHeader.Size = new System.Drawing.Size(633, 42);
             this.pnlHeader.TabIndex = 0;
             // 
             // lblHeader
@@ -54,7 +57,7 @@ namespace OliveBranchBakes.Forms
             this.lstSummary.FormattingEnabled = true;
             this.lstSummary.ItemHeight = 20;
             this.lstSummary.Location = new System.Drawing.Point(21, 57);
-            this.lstSummary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstSummary.Margin = new System.Windows.Forms.Padding(2);
             this.lstSummary.Name = "lstSummary";
             this.lstSummary.Size = new System.Drawing.Size(346, 124);
             this.lstSummary.TabIndex = 1;
@@ -63,7 +66,7 @@ namespace OliveBranchBakes.Forms
             // 
             this.lblPickup.AutoSize = true;
             this.lblPickup.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblPickup.Location = new System.Drawing.Point(21, 203);
+            this.lblPickup.Location = new System.Drawing.Point(404, 57);
             this.lblPickup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPickup.Name = "lblPickup";
             this.lblPickup.Size = new System.Drawing.Size(168, 20);
@@ -73,11 +76,11 @@ namespace OliveBranchBakes.Forms
             // txtPickupNotes
             // 
             this.txtPickupNotes.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtPickupNotes.Location = new System.Drawing.Point(21, 224);
-            this.txtPickupNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPickupNotes.Location = new System.Drawing.Point(408, 101);
+            this.txtPickupNotes.Margin = new System.Windows.Forms.Padding(2);
             this.txtPickupNotes.Multiline = true;
             this.txtPickupNotes.Name = "txtPickupNotes";
-            this.txtPickupNotes.Size = new System.Drawing.Size(346, 50);
+            this.txtPickupNotes.Size = new System.Drawing.Size(214, 278);
             this.txtPickupNotes.TabIndex = 3;
             // 
             // btnPlaceOrder
@@ -88,7 +91,7 @@ namespace OliveBranchBakes.Forms
             this.btnPlaceOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnPlaceOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(231)))));
             this.btnPlaceOrder.Location = new System.Drawing.Point(21, 292);
-            this.btnPlaceOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPlaceOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlaceOrder.Name = "btnPlaceOrder";
             this.btnPlaceOrder.Size = new System.Drawing.Size(345, 41);
             this.btnPlaceOrder.TabIndex = 4;
@@ -104,7 +107,7 @@ namespace OliveBranchBakes.Forms
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(44)))), ((int)(((byte)(28)))));
             this.btnBack.Location = new System.Drawing.Point(21, 345);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(150, 34);
             this.btnBack.TabIndex = 5;
@@ -120,7 +123,7 @@ namespace OliveBranchBakes.Forms
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(231)))));
             this.btnHome.Location = new System.Drawing.Point(216, 345);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(150, 34);
             this.btnHome.TabIndex = 6;
@@ -128,11 +131,42 @@ namespace OliveBranchBakes.Forms
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // lblPickupDate
+            // 
+            this.lblPickupDate.AutoSize = true;
+            this.lblPickupDate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblPickupDate.Location = new System.Drawing.Point(141, 194);
+            this.lblPickupDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPickupDate.Name = "lblPickupDate";
+            this.lblPickupDate.Size = new System.Drawing.Size(86, 20);
+            this.lblPickupDate.TabIndex = 7;
+            this.lblPickupDate.Text = "Pickup date";
+            // 
+            // dtpPickup
+            // 
+            this.dtpPickup.Location = new System.Drawing.Point(81, 217);
+            this.dtpPickup.Name = "dtpPickup";
+            this.dtpPickup.Size = new System.Drawing.Size(200, 20);
+            this.dtpPickup.TabIndex = 8;
+            // 
+            // lblTotals
+            // 
+            this.lblTotals.AutoSize = true;
+            this.lblTotals.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblTotals.Location = new System.Drawing.Point(77, 253);
+            this.lblTotals.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotals.Name = "lblTotals";
+            this.lblTotals.Size = new System.Drawing.Size(0, 20);
+            this.lblTotals.TabIndex = 9;
+            // 
             // OrderSummaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 398);
+            this.ClientSize = new System.Drawing.Size(633, 398);
+            this.Controls.Add(this.lblTotals);
+            this.Controls.Add(this.dtpPickup);
+            this.Controls.Add(this.lblPickupDate);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnPlaceOrder);
@@ -141,7 +175,7 @@ namespace OliveBranchBakes.Forms
             this.Controls.Add(this.lstSummary);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "OrderSummaryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -163,5 +197,8 @@ namespace OliveBranchBakes.Forms
         private System.Windows.Forms.Button btnPlaceOrder;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Label lblPickupDate;
+        private System.Windows.Forms.DateTimePicker dtpPickup;
+        private System.Windows.Forms.Label lblTotals;
     }
 }
