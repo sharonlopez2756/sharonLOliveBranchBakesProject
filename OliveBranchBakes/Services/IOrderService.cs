@@ -1,13 +1,13 @@
+using System;
+using System.Collections.Generic;
 using OliveBranchBakes.Models;
 
 namespace OliveBranchBakes.Services
 {
-    
-    // Contract for order creation and management.
-   
     public interface IOrderService
     {
-        // Future: Order CreateOrder(Order order);
-        // Future: Order GetOrder(int orderId);
+        Order PlaceOrder(IList<OrderItem> items, DateTime pickupDate, string pickupNotes, int customerId);
+        IList<Order> GetOrdersForCustomer(int customerId);
+        string NextConfirmationNumber(DateTime orderDate);
     }
 }
