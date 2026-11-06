@@ -6,22 +6,16 @@ using OliveBranchBakes.Models;
 namespace OliveBranchBakes.Forms
 {
    
-    // Non-functional navigation buttons lead to the other prototype forms.
+   
     
     public partial class WelcomeForm : Form
     {
         public WelcomeForm()
         {
             InitializeComponent();
-            ApplyTheme();
+       
         }
 
-        private void ApplyTheme()
-        {
-            this.BackColor = BakeryTheme.Cream;
-            this.ForeColor = BakeryTheme.TextDark;
-            this.Font = new Font(BakeryTheme.PrimaryFontFamily, BakeryTheme.BodyFontSize);
-        }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {

@@ -54,7 +54,6 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderItem.cs" />
     <Compile Include="Models\AdminUser.cs" />
-    <Compile Include="Models\BakeryTheme.cs" />
     <!-- Forms -->
     <Compile Include="Forms\WelcomeForm.cs">
       <SubType>Form</SubType>
@@ -92,6 +91,11 @@
     <Compile Include="Forms\AdminConsoleForm.Designer.cs">
       <DependentUpon>AdminConsoleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\AppSettings.cs" />
     <Compile Include="Services\BakeryRuleService.cs" />
     <Compile Include="Services\DataStore.cs" />
@@ -118,6 +122,9 @@
     <EmbeddedResource Include="Forms\AdminConsoleForm.resx">
       <DependentUpon>AdminConsoleForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminLoginForm.resx">
+      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerAccountForm.resx">
       <DependentUpon>CustomerAccountForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +134,55 @@
     <EmbeddedResource Include="Forms\OrderSummaryForm.resx">
       <DependentUpon>OrderSummaryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\bakerywelcomebackground.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\myaccounttextimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\myaccounttextimageWORKING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\Adminlogintext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\adminconsolepic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\ordersummarytext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\pickupdatetext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\pickupnotestext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\cakepictureaesthetic.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\cakepicture2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\yourordertitletext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\yourordertitletextPROPERSIZE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\menudayofpicture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

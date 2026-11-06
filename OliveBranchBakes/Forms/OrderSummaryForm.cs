@@ -33,7 +33,7 @@ namespace OliveBranchBakes.Forms
                 : new List<OrderItem>();
 
             InitializeComponent();
-            ApplyTheme();
+      
 
             dtpPickup.MinDate = DateTime.Today.AddDays(1);
             dtpPickup.Value = DateTime.Today.AddDays(2);
@@ -43,12 +43,6 @@ namespace OliveBranchBakes.Forms
         }
 
 
-
-        private void ApplyTheme()
-        {
-            this.BackColor = BakeryTheme.Cream;
-            this.ForeColor = BakeryTheme.TextDark;
-        }
 
         private void dtpPickup_ValueChanged(object sender, EventArgs e)
         {
@@ -135,6 +129,11 @@ namespace OliveBranchBakes.Forms
             var welcome = new WelcomeForm();
             welcome.Show();
             this.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

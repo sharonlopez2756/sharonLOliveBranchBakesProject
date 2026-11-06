@@ -19,18 +19,10 @@ namespace OliveBranchBakes.Forms
         public CustomerOrderForm()
         {
             InitializeComponent();
-            ApplyTheme();
             _menuDate = DateTime.Today;
             dtpMenuDate.Value = _menuDate;
             RefreshMenu();
             RefreshCartDisplay();
-        }
-
-        private void ApplyTheme()
-        {
-            this.BackColor = BakeryTheme.Cream;
-            this.ForeColor = BakeryTheme.TextDark;
-            this.Font = new Font(BakeryTheme.PrimaryFontFamily, BakeryTheme.BodyFontSize);
         }
 
         private void RefreshMenu()

@@ -13,14 +13,9 @@ namespace OliveBranchBakes.Forms
         public AdminConsoleForm()
         {
             InitializeComponent();
-            ApplyTheme();
+          
         }
 
-        private void ApplyTheme()
-        {
-            this.BackColor = BakeryTheme.Cream;
-            this.ForeColor = BakeryTheme.TextDark;
-        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -39,6 +34,11 @@ namespace OliveBranchBakes.Forms
         {
             MessageBox.Show("Order management will be implemented in a later phase.",
                 "Olive Branch Bakes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

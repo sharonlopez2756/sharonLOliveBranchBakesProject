@@ -11,14 +11,10 @@ namespace OliveBranchBakes.Forms
         public AdminLoginForm()
         {
             InitializeComponent();
-            ApplyTheme();
+      
         }
 
-        private void ApplyTheme()
-        {
-            this.BackColor = BakeryTheme.Cream;
-            this.ForeColor = BakeryTheme.TextDark;
-        }
+        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {

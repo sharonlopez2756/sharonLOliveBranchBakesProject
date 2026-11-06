@@ -13,14 +13,10 @@ namespace OliveBranchBakes.Forms
         public CustomerAccountForm()
         {
             InitializeComponent();
-            ApplyTheme();
+           
         }
 
-        private void ApplyTheme()
-        {
-            this.BackColor = BakeryTheme.Cream;
-            this.ForeColor = BakeryTheme.TextDark;
-        }
+      
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -67,6 +63,11 @@ namespace OliveBranchBakes.Forms
             var welcome = new WelcomeForm();
             welcome.Show();
             this.Close();
+        }
+
+        private void CustomerAccountForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
