@@ -56,6 +56,12 @@ namespace OliveBranchBakes.Services
                 Settings = CreateDefaultSettings();
             }
 
+            Admins = LoadAdmins();
+            if (Admins == null)
+            {
+                Admins = new List<AdminUser>();
+            }
+
             SaveSettings();
         }
 
@@ -65,6 +71,7 @@ namespace OliveBranchBakes.Services
             SaveCustomers();
             SaveOrders();
             SaveSettings();
+            SaveAdmins();
         }
 
         public static void SaveProducts()
@@ -75,6 +82,16 @@ namespace OliveBranchBakes.Services
         public static void SaveCustomers()
         {
             WriteXml(CustomersFile, Customers ?? new List<Customer>());
+        }
+
+        public static void SaveAdmins()
+        {
+            WriteXml(AdminsFile, Admins ?? new List<AdminUser>());
+        }
+
+        private static List<AdminUser> LoadAdmins()
+        {
+            return ReadXml<List<AdminUser>>(AdminsFile) ?? new List<AdminUser>();
         }
 
         public static void SaveOrders()
@@ -106,6 +123,8 @@ namespace OliveBranchBakes.Services
         {
             return ReadXml<AppSettings>(SettingsFile) ?? CreateDefaultSettings();
         }
+
+        public static List<AdminUser> Admins { get; set; }
 
         private static AppSettings CreateDefaultSettings()
         {
@@ -144,6 +163,8 @@ namespace OliveBranchBakes.Services
             }
         }
 
+        private static readonly string AdminsFile = Path.Combine(DataFolder, "admins.xml");
+     
         private static void SeedProducts()
         {
             Products = new List<Product>
@@ -211,6 +232,7 @@ namespace OliveBranchBakes.Services
                 }
             };
         }
+
     }
 }
 
