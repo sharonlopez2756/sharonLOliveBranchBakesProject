@@ -96,9 +96,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\AppSettings.cs" />
     <Compile Include="Services\BakeryRuleService.cs" />
     <Compile Include="Services\DataStore.cs" />
+    <Compile Include="Services\IAdminService.cs" />
     <!-- Services -->
     <Compile Include="Services\IOrderService.cs" />
     <Compile Include="Services\IPricingService.cs" />
