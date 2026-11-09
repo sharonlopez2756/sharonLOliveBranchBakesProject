@@ -71,7 +71,7 @@ namespace OliveBranchBakes.Forms
 
             int piesLeft = _scheduling.PiesRemainingForDate(pickup);
             lblTotals.Text = string.Format(
-                "P5: discount if 7+ days out; $5 rush if under 48 hours.\r\nO1: {0} pie slot(s) left for {1:d}.",
+                "{0} pie slot(s) left for {1:d}.",
                 piesLeft, pickup.Date);
         }
 
