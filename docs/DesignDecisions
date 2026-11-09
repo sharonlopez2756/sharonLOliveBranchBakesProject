@@ -17,3 +17,12 @@ Why: Variant Card digit 4 requires Gingerbread loaf only in season, with dates s
 Alt. rejected: Hiding the item only in the form with an if on the date picker. That puts a business rule in the UI and is harder to test or reuse.
 Source/test: Written for Checkpoint 3B. Proved by setting menu date to 12/01 (Gingerbread appears) and 06/01 (Gingerbread disappears).
 
+Phase 3C/3D 11/9/2026
+
+1) Decision: P5 pricing rule implemented into PricingService/O1 Pie capcity rule implemented into SchedulingService
+Where: Services/PricingService.cs (CalculateDiscount, CalculateFees, GetBreakdown), Services/SchedulingService.cs (CanAcceptOrder, CountPiesForDate), called from Services/OrderService.cs and Forms/OrderSummaryForm.cs
+What: PricingService applies $0.50 off each pie/cake when pickup is 7+ days out, a $5.00 rush fee under 48 hours, and 8.5% tax on the discounted subtotal plus fees. SchedulingService blocks a pickup date when pies already booked plus the cart would go over 12, and returns how many pie slots remain.
+Why: Variant Card digits 0 and 8 require O1 and P5. Keeping rules in services matches the Phase 3 rule that business logic must not live only in UI events, and the same methods can be reused for summary, place order, and tests T1–T7.
+Alt rejected: Calculating discount, tax, and pie limits inside btnPlaceOrder_Click. Faster to type once, but hard to test against the hand table and easy to duplicate wrong on another form.
+Source/test: Proved by T1 (3-day pickup, total $54.79, no discount), T3 (7-day pickup, $0.50 off, total $54.25), and T7 (order blocked when pies would exceed 12).
+
